@@ -99,6 +99,6 @@ Endpoint = 48.24.48.12:51820
 We're using Ansible here only for convenience, because it makes setting up multiple systems easy. But you can set it up manually as well. The "magic" behind a Breakout Box is contained in only four files:
 
 * The server's [Wireguard configuration](server/templates/wg.conf.j2) which routes all network through the box's incoming connection.
-* The server's [breakout systemd service](box/templates/breakout-box.service.j2) which sets up the Wireguard interface, and sets up a separate routing table for the Wireguard traffic.
+* The server's [breakout systemd service](server/templates/breakout-box.service.j2) which sets up the Wireguard interface, and sets up a separate routing table for the Wireguard traffic.
 * The box's [Wireguard configuration](box/templates/wg.conf.j2) 
 * The box's [breakout-box systemd service](box/templates/breakout-box.service.j2) which NATs all traffic coming in to the Wireguard interface to its outgoing network.
